@@ -4,6 +4,7 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext ,socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
+import {IoAppsOutline} from "react-icons/io5"
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -23,7 +24,7 @@ const Headermain = () => {
           <div className="d-flex align-items-center">
           <Themetoggle />
           <button className="menu__button  nav_ac" onClick={handleToggle}>
-            {!isActive ? <VscClose /> : <VscGrabber />}
+            {!isActive ? <VscClose /> : <IoAppsOutline />}
           </button>
           
           </div>
@@ -34,17 +35,17 @@ const Headermain = () => {
             <div className="menu__wrapper">
               <div className="menu__container p-3">
                 <ul className="the_menu">
-                  <li className="menu_item ">
-                  <Link  onClick={handleToggle} to="/" className="my-3">Home</Link>
+                  <li className="menu_item">
+                    <Link  onClick={handleToggle} to="/" className="my-2">Home</Link>
                   </li>
                   <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                    <Link  onClick={handleToggle} to="/portfolio" className="my-2"> Portfolio</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
+                    <Link onClick={handleToggle} to="/about" className="my-2">About</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
+                    <Link onClick={handleToggle} to="/contact" className="my-2"> Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -52,9 +53,9 @@ const Headermain = () => {
           </div>
           <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
             <div className="d-flex">
-            <a href={socialprofils.facebook}>Facebook</a>
-            <a href={socialprofils.github}>Github</a>
-            <a href={socialprofils.twitter}>Twitter</a>
+              <a href={socialprofils.facebook}>Facebook</a>
+              <a href={socialprofils.github}>Github</a>
+              <a href={socialprofils.twitter}>Twitter</a>
             </div>
             <p className="copyright m-0">copyright __ {logotext}</p>
           </div>

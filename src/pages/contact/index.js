@@ -5,6 +5,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
+import toast,{ Toast } from "react-hot-toast";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -16,6 +17,8 @@ export const ContactUs = () => {
     alertmessage: "",
     variant: "",
   });
+  
+  const toastHandler = () => toast('Sent Succesfully')
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +43,9 @@ export const ContactUs = () => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: () => {
+              toastHandler()
+            },
             variant: "success",
             show: true,
           });
@@ -81,7 +86,7 @@ export const ContactUs = () => {
         <Row className="sec_sp">
           <Col lg="12">
             <Alert
-              //show={formData.show}
+              // show={formData.show}
               variant={formData.variant}
               className={`rounded-0 co_alert ${
                 formData.show ? "d-block" : "d-none"

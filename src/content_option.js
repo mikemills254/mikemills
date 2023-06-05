@@ -91,9 +91,9 @@ const contactConfig = {
     description: "Feel free to reach out to me! I'm always excited to connect and discuss potential collaborations, projects, or simply have a conversation. Whether you have a question, an idea, or just want to say hello, I'm just a message away",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_dx4nak4",
+    YOUR_TEMPLATE_ID: "template_owmao3j",
+    YOUR_USER_ID: "_oJhGeuItqvHWzXF0",
 };
 
 const socialprofils = {
